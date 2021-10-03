@@ -1,0 +1,122 @@
+body{
+    background-color: #18A383;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing:  border-box;
+    padding-top: 60px;
+}
+
+#menu, #formularios{
+    width: 340px;
+    margin: 0 auto;
+}
+
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    text-align: center;
+}
+
+#menu ul li a{
+    background-color: #ddd;
+    color: #222;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+#menu ul li a:hover{
+    background-color: #eee;
+}
+
+.field-container div{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.field-container i{
+    border: solid 1px #ccc;
+    background-color: #ddd;
+    color: #888;
+    padding: 12.5px 10px 11px 10px;
+    border-radius: 5px 0 0 5px;
+    margin-right: -5px;
+    vertical-align: top;
+}
+
+.field{
+    border: solid 1px #ccc;
+    padding: 12px;
+    border-radius: 0 5px 5px 0;
+    width: 230px;
+    height: 12px;
+}
+
+.field:focus{
+    border-color: #18A383;
+}
+
+textarea{
+    vertical-align: top;
+    resize: none;
+    outline: none;
+    border: 0;
+}
+
+form{
+    text-align: center;
+    margin: 0 auto;
+    color: #999;
+    border-radius: 0 0 3px 3px;
+    padding: 20px;
+    background-color: white;
+    width: 300px;
+    font-size: 0.8em;
+}
+
+#form-vigge{
+    display: none;
+}
+
+.btn{
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+.btn-green{
+    color: white;
+    background-color: #3CC93F;
+    width: 140px;
+}
+
+.btn-red{
+    color: white;
+    background-color: #e62e15;
+    width: 140px;
+}
+
+.btn-green:hover{
+    background-color: #37B839;
+}
+
+.btn-red:hover{
+    background-color: #c92415;
+}
+
+.active{
+    background-color: white !important;
+}
+
+p, H1{
+    color: white;
+}
