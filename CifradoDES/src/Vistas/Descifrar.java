@@ -2,6 +2,8 @@ package Vistas;
 
 import Archivos.GestionA;
 import DES.CifradoDES;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -23,6 +25,12 @@ public class Descifrar extends javax.swing.JFrame {
     public Descifrar() {
         initComponents();
         setLocationRelativeTo(null);
+    }
+    
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("IMG/Icono.png"));
+        return retValue;
     }
 
     /**
@@ -49,6 +57,7 @@ public class Descifrar extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -103,7 +112,7 @@ public class Descifrar extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 350, 60, 30));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 350, 50, 30));
 
         Mensajes.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         Mensajes.setForeground(new java.awt.Color(255, 0, 51));

@@ -1,6 +1,8 @@
 package Vistas;
 import Archivos.GestionA;
 import DES.CifradoDES;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.io.*;
 import javax.swing.*;
 
@@ -23,6 +25,12 @@ public class Cifrar extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
 
+    @Override
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("IMG/Icono.png"));
+        return retValue;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,6 +56,7 @@ public class Cifrar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 153));
+        setIconImage(getIconImage());
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
