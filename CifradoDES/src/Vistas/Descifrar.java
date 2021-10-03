@@ -155,13 +155,13 @@ public class Descifrar extends javax.swing.JFrame {
             Mensajes.setText("La clabe debe tener: " + NumeroCaracteres + " Caracteres");
             return;
         }
-        if (Clave.getText().isEmpty() || txtAreaTexto.getText().isEmpty()) {
-            Mensajes.setText("Clave y/o Texto a cifrar no pueden estar vacios");
-        }
+        if (Clave.getText().isEmpty() || txtAreaTexto.getText().isEmpty() || NomArch.getText().isEmpty()) {
+            Mensajes.setText("Hay algun campo vacio");
+        }else{
         CifradoDES log = new CifradoDES();
         txtAreaTexto.setText(log.Descifrar(txtAreaTexto.getText(), Clave.getText()));
-        
-        if(seleccionado.showDialog(null, "Desifrar") == JFileChooser.APPROVE_OPTION){
+
+        if(seleccionado.showDialog(null, "Descifrar") == JFileChooser.APPROVE_OPTION){
             archivo = seleccionado.getSelectedFile();
             if(archivo.getName().endsWith("txt")){
                 String contenido = txtAreaTexto.getText();
@@ -174,6 +174,7 @@ public class Descifrar extends javax.swing.JFrame {
             }else{
                 Mensajes.setText("El archivo debe ser txt");
             }
+        }
         }
         
     }//GEN-LAST:event_jButton2ActionPerformed

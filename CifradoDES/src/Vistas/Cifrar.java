@@ -86,6 +86,12 @@ public class Cifrar extends javax.swing.JFrame {
 
         jLabel3.setText("Llave");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 137, -1, -1));
+
+        Clave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClaveActionPerformed(evt);
+            }
+        });
         getContentPane().add(Clave, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 134, 122, -1));
 
         Bcifrar.setBackground(new java.awt.Color(153, 255, 153));
@@ -183,9 +189,9 @@ public class Cifrar extends javax.swing.JFrame {
             Mensajes.setText("La clabe debe tener: " + NumeroCaracteres + " Caracteres");
             return;
         }
-        if (Clave.getText().isEmpty() || txtAreaTexto.getText().isEmpty()) {
-            Mensajes.setText("Clave y/o Texto a cifrar no pueden estar vacios");
-        }
+        if (Clave.getText().isEmpty() || txtAreaTexto.getText().isEmpty() || NomArch.getText().isEmpty()) {
+            Mensajes.setText("Hay algun campo vacio");
+        }else{
         CifradoDES log = new CifradoDES();
         txtAreaTexto.setText(log.Cifrado(txtAreaTexto.getText(), Clave.getText()));
         
@@ -203,6 +209,7 @@ public class Cifrar extends javax.swing.JFrame {
                 Mensajes.setText("El texto se debe etsar en txt");
             }
         }
+        }
         
     }//GEN-LAST:event_BcifrarActionPerformed
 
@@ -215,6 +222,10 @@ public class Cifrar extends javax.swing.JFrame {
         ir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ClaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClaveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ClaveActionPerformed
 
     /**
      * @param args the command line arguments
