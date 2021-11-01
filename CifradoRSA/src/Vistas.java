@@ -291,7 +291,7 @@ public class Vistas extends javax.swing.JFrame {
         largop = val.Tama(jNumP.getText(), "Número P");
         largoq = val.Tama(jNumQ.getText(), "Número Q");
         
-        if(vaciop && vacioq && esprimop && esprimoq){
+        if(vaciop && vacioq && esprimop && esprimoq && largop && largoq){
             BigInteger p=new BigInteger(jNumP.getText());
             BigInteger q=new  BigInteger(jNumQ.getText());
             TAMensaje.setText("");
